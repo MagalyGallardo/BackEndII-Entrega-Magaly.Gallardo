@@ -1,0 +1,49 @@
+<style>
+    .login-container {
+        margin-top: 64px !important;
+        max-width: 360px;
+        margin: auto;
+        padding: 32px;
+        border-radius: 0.5em;
+        color: #e7d4d4;
+        border: 1px solid #666;
+    }
+
+    .a2 {
+        color: #e1e1e1;
+    }
+
+    .a2:hover {
+        color: #fff;
+    }
+</style>
+
+<div class="login-container">
+    <h1><b>CODERStore</b></h1>
+    <h2><b>Login</b></h2>
+
+    <!-- Formulario de login normal -->
+    <form action="/api/users/pplogin" method="post">
+        <div class="input-group" style="width: 300px; margin-bottom: 32px;">
+            <span class="input-group-text" id="group1"><i class="fa-solid fa-user"></i></span>
+            <input type="email" name="username" class="form-control" placeholder="Email" required="required" autofocus="autofocus">
+        </div>
+        <div class="input-group" style="width: 300px; margin-bottom: 32px;">
+            <span class="input-group-text" id="group2"><i class="fa-solid fa-lock"></i></span>
+            <input type="password" name="password" class="form-control" required="required">
+        </div>
+        <button type="submit" class="btn btn-success">Ingresar</button>
+    <!-- Botón de inicio de sesión con GitHub -->
+    <div style="margin-top: 24px;">
+        <a href="/api/users/ghlogin">
+            <button type="button" class="btn btn-dark">
+                <i class="fab fa-github"></i> Iniciar sesión con GitHub
+            </button>
+        </a>
+    </div>
+        <div style="margin-top: 24px;">
+            No tenés cuenta?: <a class="a2" href="/views/register">Registrate</a>
+        </div>
+    </form>
+
+</div>
