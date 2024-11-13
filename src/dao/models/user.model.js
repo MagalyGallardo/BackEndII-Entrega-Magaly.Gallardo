@@ -10,7 +10,7 @@ const schema = new mongoose.Schema({
     email: { type: String, required: true, unique: true },
     age: { type: Number, required: false },
     password: { type: String, required: true },
-    cart: { type: mongoose.Schema.Types.ObjectId, ref: 'carts', default: null },
+    cart: { type: mongoose.Schema.Types.ObjectId, ref: 'carts', default: null, required: true },
     role: { type: String, default: 'user' }
 });
 
